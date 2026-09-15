@@ -1,0 +1,4 @@
+# GitHub Linguist Overrides - 100% HTML
+*.html linguist-language=HTML
+*.svg linguist-vendored=true
+assets/** linguist-vendored=true
