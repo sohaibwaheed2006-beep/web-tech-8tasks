@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 2 — Department Website | Web Tech Lab 01</title>
-  <meta name="description" content="University CS Department website page for Web Technologies Graded Lab Task 01.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Question 2: University Department Website</title>
 </head>
 <body>
 
-  <nav class="topnav">
-    <a href="index.html" class="brand">Lab 01 Portal</a>
-    <a href="task1_student_profile.html">T1</a>
-    <a href="task2_department_website.html" class="active">T2: Department</a>
-    <a href="task3_restaurant_website.html">T3</a>
-    <a href="task4_college_website.html">T4</a>
-    <a href="task5_hotel_booking.html">T5</a>
-    <a href="task6_job_application.html">T6</a>
-    <a href="task7_property_listing.html">T7</a>
-    <a href="task8_event_registration.html">T8</a>
-  </nav>
+    <!-- Navigation Bar -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#f0f4f8">
+        <tr>
+            <td align="center">
+                <a href="index.html"><b>&larr; Return to Dashboard Hub</b></a> |
+                <a href="task1_student_profile.html">Task 1</a> |
+                <a href="task2_department_website.html"><b>Task 2: Department</b></a> |
+                <a href="task3_restaurant_website.html">Task 3</a> |
+                <a href="task4_college_website.html">Task 4</a> |
+                <a href="task5_hotel_booking.html">Task 5</a> |
+                <a href="task6_job_application.html">Task 6</a> |
+                <a href="task7_property_listing.html">Task 7</a> |
+                <a href="task8_event_registration.html">Task 8</a>
+            </td>
+        </tr>
+    </table>
 
-  <div class="page-wrap">
+    <hr size="3" color="#000000">
 
-    <div class="page-header">
-      <span class="task-badge">Task 02</span>
-      <h1>Department of Computer Science</h1>
-      <p>Faculty of Engineering &amp; Information Technology &mdash; COMSATS University Islamabad</p>
-    </div>
-
-    <!-- About Section -->
-    <div class="content-card">
-      <h2>About the Department</h2>
-      <p>
-        The Department of Computer Science at COMSATS University Islamabad is one of the most prestigious CS departments in Pakistan. Established in 1998, the department offers cutting-edge programs at undergraduate, graduate, and doctoral levels.
-      </p>
-      <p>
-        Our mission is to produce highly skilled, ethically grounded, and research-driven computer scientists who can lead innovation in the technology sector both locally and globally.
-      </p>
-
-      <hr>
-
-      <h2>Degree Programs Offered</h2>
-      <ul id="degree-programs-list">
-        <li>Bachelor of Science in Computer Science (BSCS)</li>
-        <li>Bachelor of Science in Software Engineering (BSSE)</li>
-        <li>Bachelor of Science in Data Science (BSDS)</li>
-        <li>Master of Science in Computer Science (MSCS)</li>
-        <li>Doctor of Philosophy in Computer Science (PhD CS)</li>
-      </ul>
-    </div>
+    <!-- 1. Department Name as Main Heading -->
+    <center>
+        <h1>Department of Computer Science &amp; Software Engineering</h1>
+        <p><b>Faculty of Information Sciences and Technology</b> &mdash; National Center of Academic Excellence</p>
+    </center>
 
     <hr>
 
-    <!-- Courses Section -->
-    <div class="content-card">
-      <h2>Semester Course Plan</h2>
-      <p>Courses offered starting from Semester 3 (Roman numerals):</p>
-      <ol start="3" type="I" id="semester-courses-list">
+    <!-- 2. Introduction Paragraph -->
+    <h2>Department Overview &amp; Vision</h2>
+    <p>
+        The Department of Computer Science &amp; Software Engineering is dedicated to providing state-of-the-art education and research opportunities in computing sciences. Established with the vision of producing high-caliber engineers, researchers, and innovators, the department fosters a collaborative learning environment equipped with modern computing laboratories, high-performance computing clusters, and specialized artificial intelligence research hubs.
+    </p>
+
+    <hr>
+
+    <!-- 3. Degree Programs Using Unordered List <ul> -->
+    <h2>Offered Degree Programs</h2>
+    <p>The department currently offers accredited undergraduate and postgraduate degree programs:</p>
+    <ul>
+        <li>Bachelor of Science in Computer Science (BSCS) &mdash; 4 Years</li>
+        <li>Bachelor of Science in Software Engineering (BSSE) &mdash; 4 Years</li>
+        <li>Bachelor of Science in Artificial Intelligence (BSAI) &mdash; 4 Years</li>
+        <li>Bachelor of Science in Cyber Security (BS-CYS) &mdash; 4 Years</li>
+        <li>Master of Science in Computer Science (MSCS) &mdash; 2 Years</li>
+        <li>Doctor of Philosophy in Computer Science (PhD CS) &mdash; 3 to 5 Years</li>
+    </ul>
+
+    <hr>
+
+    <!-- 4. Semester Courses Using Ordered List <ol> starting from number other than 1 with different numbering type -->
+    <h2>Semester Core Courses (Advanced Undergraduate Level)</h2>
+    <p>Below is the approved sequence of advanced semester courses starting from Semester 3 (Roman Numeral Format):</p>
+    <ol type="I" start="3">
         <li>Data Structures and Algorithms</li>
-        <li>Object-Oriented Programming with Java</li>
-        <li>Database Management Systems</li>
-        <li>Computer Organization and Architecture</li>
-        <li>Discrete Mathematics</li>
-        <li>Software Engineering Fundamentals</li>
-        <li>Web Technologies</li>
-        <li>Operating Systems</li>
-      </ol>
-    </div>
+        <li>Object-Oriented Programming (Java &amp; C++)</li>
+        <li>Database Management Systems &amp; SQL Architecture</li>
+        <li>Computer Organization and Assembly Language</li>
+        <li>Theory of Automata &amp; Formal Languages</li>
+        <li>Web Technologies &amp; Full-Stack Frameworks</li>
+        <li>Operating Systems &amp; Concurrency Control</li>
+        <li>Artificial Intelligence &amp; Neural Networks</li>
+    </ol>
 
     <hr>
 
-    <!-- Faculty Section -->
-    <div class="content-card">
-      <h2>Faculty Directory</h2>
-      <p>Our faculty comprises experienced academics and industry professionals:</p>
-      <dl id="faculty-list">
-        <dt>Dr. Kamran Raza</dt>
-        <dd>Professor &amp; Department Chair &mdash; Expert in Distributed Computing and Cloud Systems.</dd>
+    <!-- 5. Faculty Information Using Description List <dl>, <dt>, and <dd> -->
+    <h2>Faculty Directory &amp; Research Profiles</h2>
+    <p>Our faculty consists of internationally recognized scholars and educators:</p>
+    <dl>
+        <dt><b>Dr. Kamran Raza</b> &mdash; <i>Professor &amp; Head of Department</i></dt>
+        <dd>Specialization: Distributed Cloud Systems, High-Performance Parallel Computing, and Scalable Architectures.</dd>
 
-        <dt>Dr. Sadia Manzoor</dt>
-        <dd>Associate Professor &mdash; Specialization in Machine Learning and Bioinformatics.</dd>
+        <dt><b>Dr. Sadia Manzoor</b> &mdash; <i>Associate Professor</i></dt>
+        <dd>Specialization: Machine Learning, Natural Language Processing, and Biomedical Data Science.</dd>
 
-        <dt>Mr. Usman Khalid</dt>
-        <dd>Lecturer &mdash; Teaches Web Technologies, JavaScript, and Front-End Frameworks.</dd>
+        <dt><b>Mr. Usman Khalid</b> &mdash; <i>Assistant Professor</i></dt>
+        <dd>Specialization: Web Engineering, Human-Computer Interaction, and Modern Software Frameworks.</dd>
 
-        <dt>Ms. Ayesha Tariq</dt>
-        <dd>Lecturer &mdash; Covers Database Systems, SQL, and Data Warehousing.</dd>
+        <dt><b>Ms. Ayesha Tariq</b> &mdash; <i>Senior Lecturer</i></dt>
+        <dd>Specialization: Relational &amp; NoSQL Database Systems, Data Warehousing, and Information Security.</dd>
 
-        <dt>Dr. Bilal Tahir</dt>
-        <dd>Assistant Professor &mdash; Research focus on Computer Vision and Deep Learning.</dd>
-      </dl>
+        <dt><b>Dr. Bilal Tahir</b> &mdash; <i>Assistant Professor</i></dt>
+        <dd>Specialization: Computer Vision, Deep Learning Applications, and Autonomous Robotics.</dd>
+    </dl>
 
-      <br>
-      <p>
-        For the full faculty list and research publications, visit the official page:
-        <a href="https://www.comsats.edu.pk/cs/" target="_blank" id="dept-external-link">CS Department Official Website ↗</a>
-      </p>
-    </div>
+    <hr size="2">
 
-    <footer class="site-footer">
-      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 2: Department Website</p>
-    </footer>
+    <!-- 6. External University Website Link Opening in New Tab -->
+    <h2>Official University Link</h2>
+    <p>
+        For detailed academic calendars, admissions guidelines, and faculty publications, visit our main institutional portal:<br>
+        <a href="https://www.comsats.edu.pk" target="_blank"><b>Visit the Main University Official Website (Opens in New Tab) &rarr;</b></a>
+    </p>
 
-  </div>
+    <hr>
+
+    <center>
+        <p><small>&copy; 2026 Department of Computer Science &amp; Software Engineering | Web Technologies Lab 01 (Task 2)</small></p>
+    </center>
 
 </body>
 </html>

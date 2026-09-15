@@ -1,128 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 1 — Student Profile | Web Tech Lab 01</title>
-  <meta name="description" content="Academic student profile page for Web Technologies Graded Lab Task 01.">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .profile-img-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-    .profile-img-wrap img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--teal-500);
-      box-shadow: 0 0 30px rgba(45,212,191,0.3);
-    }
-    .profile-meta {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.4rem 1rem;
-      font-size: 0.9rem;
-    }
-    .profile-meta .key {
-      font-weight: 700;
-      color: var(--teal-700);
-    }
-    .profile-meta .val {
-      color: var(--text-primary);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Question 1: Student Profile Webpage</title>
 </head>
 <body>
 
-  <nav class="topnav">
-    <a href="index.html" class="brand">Lab 01 Portal</a>
-    <a href="task1_student_profile.html" class="active">T1: Profile</a>
-    <a href="task2_department_website.html">T2</a>
-    <a href="task3_restaurant_website.html">T3</a>
-    <a href="task4_college_website.html">T4</a>
-    <a href="task5_hotel_booking.html">T5</a>
-    <a href="task6_job_application.html">T6</a>
-    <a href="task7_property_listing.html">T7</a>
-    <a href="task8_event_registration.html">T8</a>
-  </nav>
+    <!-- Navigation Bar -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#f0f4f8">
+        <tr>
+            <td align="center">
+                <a href="index.html"><b>&larr; Return to Dashboard Hub</b></a> |
+                <a href="task1_student_profile.html"><b>Task 1: Profile</b></a> |
+                <a href="task2_department_website.html">Task 2</a> |
+                <a href="task3_restaurant_website.html">Task 3</a> |
+                <a href="task4_college_website.html">Task 4</a> |
+                <a href="task5_hotel_booking.html">Task 5</a> |
+                <a href="task6_job_application.html">Task 6</a> |
+                <a href="task7_property_listing.html">Task 7</a> |
+                <a href="task8_event_registration.html">Task 8</a>
+            </td>
+        </tr>
+    </table>
 
-  <div class="page-wrap">
+    <hr size="3" color="#000000">
 
-    <div class="page-header">
-      <span class="task-badge">Task 01</span>
-      <h1>Ali Hassan</h1>
-      <p><b>Undergraduate Student</b> &mdash; Bachelor of Science in Computer Science</p>
-    </div>
-
-    <!-- Section 1: Personal Introduction -->
-    <div class="content-card">
-      <h2>Personal Introduction</h2>
-      <div class="profile-img-wrap">
-        <img src="assets/profile.svg" alt="Profile photo of Ali Hassan" width="150" height="150" id="student-profile-img">
-      </div>
-      <p>
-        Hello! My name is <b>Ali Hassan</b>, a passionate <i>Computer Science student</i> with deep enthusiasm for software development and emerging technologies.
-        <br>
-        I enjoy building web applications, exploring data structures, and solving complex algorithmic challenges in competitive programming.
-      </p>
-      <p>
-        I believe that <s>passive learning from textbooks alone</s> active hands-on coding experience shapes a truly skilled engineer. My motto is <u>build, break, and rebuild</u>.
-      </p>
-    </div>
+    <!-- Main Student Heading -->
+    <center>
+        <h1>Zayd Alexander Malik</h1>
+        <p><b>Undergraduate Student</b> | Department of Computer Science &amp; Engineering</p>
+    </center>
 
     <hr>
 
-    <!-- Section 2: Academic Background -->
-    <div class="content-card">
-      <h2>Academic Background</h2>
-      <div class="profile-meta">
-        <span class="key">Degree:</span>
-        <span class="val"><b>Bachelor of Science in Computer Science (BSCS)</b></span>
-
-        <span class="key">Semester:</span>
-        <span class="val"><b>4th Semester</b></span>
-
-        <span class="key">Specialization:</span>
-        <span class="val"><i>Software Engineering</i> &amp; <u>Data Science</u></span>
-
-        <span class="key">University:</span>
-        <span class="val"><b>COMSATS University Islamabad</b></span>
-
-        <span class="key">GPA:</span>
-        <span class="val">3.72 / 4.00</span>
-      </div>
-      <br>
-      <p>
-        I am currently enrolled in courses including <i>Web Technologies</i>, <b>Database Management Systems</b>, and <u>Object-Oriented Programming</u>.<br>
-        My academic advisor has consistently recognized me on the <b>Dean's List</b> for academic achievement.
-      </p>
-    </div>
+    <!-- Profile Image and Introduction Section -->
+    <h2>Section 1: Personal Introduction &amp; Profile</h2>
+    <table border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <td valign="top">
+                <img src="assets/profile.svg" alt="Official Student Profile Photograph of Zayd Alexander Malik" width="180" height="180" border="2">
+            </td>
+            <td valign="top">
+                <p>
+                    Hello and welcome to my academic webpage! My name is <b>Zayd Alexander Malik</b>, and I am currently an active 
+                    <i>Computer Science student</i> deeply passionate about full-stack web architecture, distributed systems, and artificial intelligence.
+                    <br><br>
+                    I believe that <s>pure passive learning from books</s> building real-world practical projects is the most 
+                    effective way to achieve <u>mastery in modern software engineering</u>.
+                    <br><br>
+                    My primary objective is to contribute to high-impact open-source systems while maintaining academic excellence.
+                </p>
+            </td>
+        </tr>
+    </table>
 
     <hr>
 
-    <!-- Section 3: Skills & Goals -->
-    <div class="content-card">
-      <h2>Skills &amp; Future Goals</h2>
-      <p>
-        My core technical skills include <b>HTML5</b>, <i>CSS3</i>, <u>JavaScript</u>, and Python. I also have working knowledge of <b>MySQL</b> and version control with <i>Git</i>.
-        <br>
-        I aspire to become a <u>full-stack developer</u> and eventually pursue graduate studies in <b>Artificial Intelligence</b>.
-      </p>
-      <p>
-        <s>I used to think front-end development was straightforward</s> &mdash; I now understand it requires tremendous precision and creativity.
-        Visit my university at:
-        <a href="https://www.comsats.edu.pk" target="_blank" id="university-link">COMSATS University Islamabad</a>.
-      </p>
-    </div>
+    <!-- Section 2: Academic Credentials -->
+    <h2>Section 2: Academic Credentials &amp; University Affiliation</h2>
+    <p>
+        <b>Degree Program:</b> Bachelor of Science in Computer Science (BSCS)<br>
+        <b>Current Semester:</b> <i>4th Semester</i> (Dean's Honor List)<br>
+        <b>Key Areas of Study:</b> <u>Data Structures</u>, <b>Web Technologies</b>, <i>Database Management Systems</i>, and <u>Computer Organization</u>.<br>
+        <b>Institutional Affiliation:</b> Student at <a href="https://www.comsats.edu.pk" target="_blank">COMSATS University Islamabad</a>.
+    </p>
 
-    <footer class="site-footer">
-      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 1: Student Profile</p>
-    </footer>
+    <hr>
 
-  </div>
+    <!-- Section 3: Technical Skills & Extracurricular Activities -->
+    <h2>Section 3: Technical Skills &amp; Extracurricular Achievements</h2>
+    <p>
+        Throughout my undergraduate tenure, I have developed technical proficiency in <b>HTML5</b>, <i>Java</i>, <u>Python</u>, and <b>SQL</b>.<br>
+        <s>I previously struggled with algorithmic problem solving</s>, but after continuous practice, I have solved over 250 problems on competitive programming platforms.
+        <br><br>
+        Outside academics, I serve as the <u>Lead Coordinator</u> for the University Computing Society and regularly organize inter-university coding hackathons.
+    </p>
+
+    <hr size="2">
+
+    <!-- University Website Link and Footer -->
+    <center>
+        <p>
+            To learn more about my institution, visit the official university portal:<br>
+            <a href="https://www.comsats.edu.pk" target="_blank"><b>Visit COMSATS University Official Website &rarr;</b></a>
+        </p>
+        <p><small>&copy; 2026 Zayd Alexander Malik | Web Technologies Lab 01 (Task 1)</small></p>
+    </center>
 
 </body>
 </html>

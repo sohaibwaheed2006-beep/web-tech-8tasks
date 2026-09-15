@@ -1,147 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 8 — Event Registration Form | Web Tech Lab 01</title>
-  <meta name="description" content="Event registration form for Web Technologies Graded Lab Task 01.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Question 8: Online Event Registration</title>
 </head>
 <body>
 
-  <nav class="topnav">
-    <a href="index.html" class="brand">Lab 01 Portal</a>
-    <a href="task1_student_profile.html">T1</a>
-    <a href="task2_department_website.html">T2</a>
-    <a href="task3_restaurant_website.html">T3</a>
-    <a href="task4_college_website.html">T4</a>
-    <a href="task5_hotel_booking.html">T5</a>
-    <a href="task6_job_application.html">T6</a>
-    <a href="task7_property_listing.html">T7</a>
-    <a href="task8_event_registration.html" class="active">T8: Event</a>
-  </nav>
+    <!-- Main Navigation Bar -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#f0f4f8">
+        <tr>
+            <td align="center">
+                <a href="index.html"><b>&larr; Return to Dashboard Hub</b></a> |
+                <a href="task1_student_profile.html">Task 1</a> |
+                <a href="task2_department_website.html">Task 2</a> |
+                <a href="task3_restaurant_website.html">Task 3</a> |
+                <a href="task4_college_website.html">Task 4</a> |
+                <a href="task5_hotel_booking.html">Task 5</a> |
+                <a href="task6_job_application.html">Task 6</a> |
+                <a href="task7_property_listing.html">Task 7</a> |
+                <a href="task8_event_registration.html"><b>Task 8: Event Form</b></a>
+            </td>
+        </tr>
+    </table>
 
-  <div class="page-wrap">
+    <hr size="3" color="#000000">
 
-    <div class="page-header">
-      <span class="task-badge">Task 08</span>
-      <h1>TechSummit 2025 — Event Registration</h1>
-      <p>Annual Technology &amp; Innovation Conference &bull; November 15–17, 2025 &bull; Islamabad Convention Centre</p>
-    </div>
+    <center>
+        <h1>EchoFest 2026 &mdash; International Music &amp; Arts Festival</h1>
+        <p><b>Official Online Participant &amp; Attendee Registration Portal</b></p>
+    </center>
 
-    <div class="content-card">
-      <h2>Attendee Registration Form</h2>
-      <form id="event-registration-form" action="#" method="post">
+    <hr>
 
-        <div class="form-grid">
+    <!-- Question 8 Form Container -->
+    <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend><b>Music Festival Attendee Registration Form</b></legend>
+            <br>
+            <table width="100%" border="1" cellpadding="10" cellspacing="0">
+                <!-- 1. Participant name -->
+                <tr>
+                    <td width="30%"><b>1. Participant Full Name:</b></td>
+                    <td width="70%">
+                        <input type="text" name="participant_name" size="40" placeholder="Enter attendee's full legal name" required>
+                    </td>
+                </tr>
 
-          <!-- 1. Full Name -->
-          <div class="form-group">
-            <label for="attendee-name">Full Name <span class="required">*</span></label>
-            <input type="text" id="attendee-name" name="attendee_name" placeholder="Your complete name" required>
-          </div>
+                <!-- 2. Email -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>2. Contact Email Address:</b></td>
+                    <td>
+                        <input type="email" name="participant_email" size="40" placeholder="attendee@example.com" required>
+                    </td>
+                </tr>
 
-          <!-- 2. Email -->
-          <div class="form-group">
-            <label for="attendee-email">Email Address <span class="required">*</span></label>
-            <input type="email" id="attendee-email" name="attendee_email" placeholder="you@email.com" required>
-          </div>
+                <!-- 3. Phone -->
+                <tr>
+                    <td><b>3. Contact Mobile / Phone:</b></td>
+                    <td>
+                        <input type="tel" name="participant_phone" size="30" placeholder="+92-300-1122334" required>
+                    </td>
+                </tr>
 
-          <!-- 3. Phone -->
-          <div class="form-group">
-            <label for="attendee-phone">Phone Number <span class="required">*</span></label>
-            <input type="tel" id="attendee-phone" name="attendee_phone" placeholder="+92-300-0000000" required>
-          </div>
+                <!-- 4. Gender -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>4. Participant Gender (Radio Buttons):</b></td>
+                    <td>
+                        <input type="radio" name="gender" value="male" id="gender_m" required> <label for="gender_m">Male</label> &nbsp;&nbsp;
+                        <input type="radio" name="gender" value="female" id="gender_f"> <label for="gender_f">Female</label> &nbsp;&nbsp;
+                        <input type="radio" name="gender" value="other" id="gender_o"> <label for="gender_o">Other / Prefer Not to Say</label>
+                    </td>
+                </tr>
 
-          <!-- 4. Organization / University -->
-          <div class="form-group">
-            <label for="attendee-org">Organization / University</label>
-            <input type="text" id="attendee-org" name="attendee_org" placeholder="e.g. COMSATS University Islamabad">
-          </div>
+                <!-- 5. Ticket type -->
+                <tr>
+                    <td><b>5. Festival Pass / Ticket Type:</b></td>
+                    <td>
+                        <select name="ticket_type" required>
+                            <option value="">-- Please Select Ticket Class --</option>
+                            <option value="general_admission">General Festival Pass (Standard Access)</option>
+                            <option value="vip_frontstage">VIP Front-Stage Experience Pass</option>
+                            <option value="all_access_backstage">All-Access Golden Backstage VIP Pass</option>
+                            <option value="student_discount">Student Concession Pass (ID Required)</option>
+                            <option value="group_package">Group Festival Pass (4+ Members)</option>
+                        </select>
+                    </td>
+                </tr>
 
-          <!-- 5. Event Type / Category -->
-          <div class="form-group">
-            <label for="event-type">Participation Category <span class="required">*</span></label>
-            <select id="event-type" name="event_type" required>
-              <option value="" disabled selected>-- Select Category --</option>
-              <option value="student">Student Attendee</option>
-              <option value="professional">Working Professional</option>
-              <option value="speaker">Guest Speaker</option>
-              <option value="exhibitor">Exhibitor / Sponsor</option>
-              <option value="media">Media / Press</option>
-              <option value="volunteer">Volunteer</option>
-            </select>
-          </div>
+                <!-- 6. Number of tickets -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>6. Number of Tickets Requested:</b></td>
+                    <td>
+                        <input type="number" name="num_tickets" min="1" max="10" value="1" required>
+                    </td>
+                </tr>
 
-          <!-- 6. Preferred Sessions (Checkboxes) -->
-          <div class="form-group full">
-            <label>Preferred Sessions <span class="required">*</span></label>
-            <div class="check-group" id="sessions-group">
-              <label><input type="checkbox" name="session" value="ai-ml"> AI &amp; Machine Learning</label>
-              <label><input type="checkbox" name="session" value="web-dev"> Web Development Trends</label>
-              <label><input type="checkbox" name="session" value="cybersecurity"> Cybersecurity &amp; Privacy</label>
-              <label><input type="checkbox" name="session" value="blockchain"> Blockchain &amp; Web3</label>
-              <label><input type="checkbox" name="session" value="cloud"> Cloud Computing &amp; DevOps</label>
-              <label><input type="checkbox" name="session" value="startups"> Startup &amp; Entrepreneurship</label>
-              <label><input type="checkbox" name="session" value="iot"> IoT &amp; Embedded Systems</label>
-            </div>
-          </div>
+                <!-- 7. Preferred event date -->
+                <tr>
+                    <td><b>7. Preferred Festival Attendance Date:</b></td>
+                    <td>
+                        <input type="date" name="event_date" required>
+                    </td>
+                </tr>
 
-          <!-- 7. Dietary Preference (Radio) -->
-          <div class="form-group full">
-            <label>Dietary Preference</label>
-            <div class="radio-group" id="dietary-group">
-              <label><input type="radio" name="dietary" value="no-restriction"> No Restrictions</label>
-              <label><input type="radio" name="dietary" value="vegetarian"> Vegetarian</label>
-              <label><input type="radio" name="dietary" value="vegan"> Vegan</label>
-              <label><input type="radio" name="dietary" value="halal"> Halal Only</label>
-              <label><input type="radio" name="dietary" value="gluten-free"> Gluten-Free</label>
-            </div>
-          </div>
+                <!-- 8. Preferred time -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>8. Preferred Arrival Time Slot:</b></td>
+                    <td>
+                        <input type="time" name="preferred_time" required>
+                    </td>
+                </tr>
 
-          <!-- 8. Registration Date -->
-          <div class="form-group">
-            <label for="registration-date">Registration Date <span class="required">*</span></label>
-            <input type="date" id="registration-date" name="registration_date" required>
-          </div>
+                <!-- 9. Food preference using radio buttons -->
+                <tr>
+                    <td><b>9. Dietary &amp; Food Preference (Radio Buttons):</b></td>
+                    <td>
+                        <input type="radio" name="food_preference" value="regular_non_veg" id="food_nonveg" required> <label for="food_nonveg">Regular Non-Vegetarian</label> &nbsp;&nbsp;
+                        <input type="radio" name="food_preference" value="vegetarian" id="food_veg"> <label for="food_veg">Vegetarian</label> &nbsp;&nbsp;
+                        <input type="radio" name="food_preference" value="vegan" id="food_vegan"> <label for="food_vegan">Strict Vegan</label> &nbsp;&nbsp;
+                        <input type="radio" name="food_preference" value="halal_only" id="food_halal"> <label for="food_halal">Halal Certified Only</label>
+                    </td>
+                </tr>
 
-          <!-- 9. T-Shirt Size -->
-          <div class="form-group">
-            <label for="tshirt-size">Event T-Shirt Size</label>
-            <select id="tshirt-size" name="tshirt_size">
-              <option value="" disabled selected>-- Select Size --</option>
-              <option value="XS">XS (Extra Small)</option>
-              <option value="S">S (Small)</option>
-              <option value="M">M (Medium)</option>
-              <option value="L">L (Large)</option>
-              <option value="XL">XL (Extra Large)</option>
-              <option value="XXL">XXL (Double Extra Large)</option>
-            </select>
-          </div>
+                <!-- 10. Additional facilities using checkboxes -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>10. Additional Festival Facilities (Checkboxes):</b></td>
+                    <td>
+                        <input type="checkbox" name="facility_camping" value="yes"> On-Site Camping Tent &nbsp;&nbsp;
+                        <input type="checkbox" name="facility_parking" value="yes"> Reserved VIP Vehicle Parking &nbsp;&nbsp;
+                        <input type="checkbox" name="facility_merch" value="yes"> Official Festival Merch Bundle &nbsp;&nbsp;<br>
+                        <input type="checkbox" name="facility_locker" value="yes"> Secure Luggage Locker &nbsp;&nbsp;
+                        <input type="checkbox" name="facility_meet_greet" value="yes"> Artist Meet &amp; Greet Access
+                    </td>
+                </tr>
 
-          <!-- 10. Special Requirements / Requests -->
-          <div class="form-group full">
-            <label for="special-requests">Special Requirements / Accessibility Needs</label>
-            <textarea id="special-requests" name="special_requests" rows="4" placeholder="e.g. wheelchair access, hearing assistance, dietary allergy details..."></textarea>
-          </div>
+                <!-- 11. Upload identification document -->
+                <tr>
+                    <td><b>11. Upload Identification Document (&lt;input type="file"&gt;):</b></td>
+                    <td>
+                        <input type="file" name="identification_doc" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <br><small>(Accepted: Government CNIC, Student ID, or Passport in PDF/JPG format)</small>
+                    </td>
+                </tr>
 
-          <!-- Submit & Reset -->
-          <div class="form-group full">
-            <div class="btn-row">
-              <button type="submit" id="event-submit-btn">Register Now</button>
-              <button type="reset" id="event-reset-btn">Clear Form</button>
-            </div>
-          </div>
+                <!-- 12. Comments using textarea -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>12. Special Requests &amp; Comments (&lt;textarea&gt;):</b></td>
+                    <td>
+                        <textarea name="event_comments" rows="5" cols="55" placeholder="State any accessibility needs, medical dietary alerts, or special requests..."></textarea>
+                    </td>
+                </tr>
 
-        </div>
-      </form>
-    </div>
+                <!-- 13. Submit and Reset buttons -->
+                <tr bgcolor="#e2e8f0">
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Register for Music Festival"> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="Clear Registration Form">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
 
-    <footer class="site-footer">
-      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 8: Event Registration Form</p>
-    </footer>
+    <hr size="2">
 
-  </div>
+    <center>
+        <p><small>&copy; 2026 EchoFest International Music &amp; Arts Festival | Web Technologies Lab 01 (Task 8)</small></p>
+    </center>
 
 </body>
 </html>

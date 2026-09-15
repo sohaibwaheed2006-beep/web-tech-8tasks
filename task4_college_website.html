@@ -1,290 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 4 — Horizon Crest Institute of Technology | Web Tech Lab 01</title>
-  <meta name="description" content="College website homepage for Web Technologies Graded Lab Task 01.">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .college-header-inner {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-    }
-    .college-header-inner img {
-      width: 80px;
-      height: 80px;
-      border-radius: var(--radius-sm);
-      border: 2px solid var(--teal-600);
-    }
-    .college-name { 
-      font-size: 1.75rem; 
-      font-weight: 800; 
-      color: #0f172a; 
-      line-height: 1.2;
-    }
-    .college-motto { 
-      font-size: 0.88rem; 
-      color: #64748b; 
-      margin-top: 0.25rem; 
-      font-style: italic; 
-    }
-
-    /* College Navigation Banner matching site teal theme */
-    .college-nav-bar {
-      background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
-      border-radius: 10px;
-      padding: 1rem 1.75rem;
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      box-shadow: 0 4px 14px rgba(15, 118, 110, 0.22);
-    }
-    .college-nav-bar a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: color 0.18s ease;
-      white-space: nowrap;
-    }
-    .college-nav-bar a:hover {
-      color: #ccfbf1;
-      text-decoration: underline;
-    }
-    .college-nav-bar .nav-sep {
-      color: rgba(255, 255, 255, 0.4);
-      font-weight: 300;
-      user-select: none;
-    }
-
-    .campus-banner-wrap {
-      margin: 1.5rem 0;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-card);
-    }
-    .campus-banner-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Question 4: College Website Homepage</title>
 </head>
 <body>
 
-  <!-- Global Lab Tasks Navigation -->
-  <nav class="topnav">
-    <a href="index.html" class="brand">Lab 01 Portal</a>
-    <a href="task1_student_profile.html">T1</a>
-    <a href="task2_department_website.html">T2</a>
-    <a href="task3_restaurant_website.html">T3</a>
-    <a href="task4_college_website.html" class="active">T4: College</a>
-    <a href="task5_hotel_booking.html">T5</a>
-    <a href="task6_job_application.html">T6</a>
-    <a href="task7_property_listing.html">T7</a>
-    <a href="task8_event_registration.html">T8</a>
-  </nav>
+    <!-- Main Lab Navigation -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#f0f4f8">
+        <tr>
+            <td align="center">
+                <a href="index.html"><b>&larr; Return to Dashboard Hub</b></a> |
+                <a href="task1_student_profile.html">Task 1</a> |
+                <a href="task2_department_website.html">Task 2</a> |
+                <a href="task3_restaurant_website.html">Task 3</a> |
+                <a href="task4_college_website.html"><b>Task 4: College</b></a> |
+                <a href="task5_hotel_booking.html">Task 5</a> |
+                <a href="task6_job_application.html">Task 6</a> |
+                <a href="task7_property_listing.html">Task 7</a> |
+                <a href="task8_event_registration.html">Task 8</a>
+            </td>
+        </tr>
+    </table>
 
-  <div class="page-wrap">
+    <hr size="3" color="#000000">
 
     <!-- 1. Header: College name, logo, and navigation links -->
-    <header class="page-header" id="college-header">
-      <span class="task-badge">Task 04</span>
-      <div class="college-header-inner">
-        <img src="assets/college-logo.svg" alt="Horizon Crest Institute of Technology Logo" id="college-logo" width="80" height="80">
-        <div>
-          <h1 class="college-name">Horizon Crest Institute of Technology</h1>
-          <div class="college-motto">"Pioneering Innovation, Inspiring Excellence, Shaping Tomorrow"</div>
-        </div>
-      </div>
+    <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#0f766e">
+        <tr>
+            <td width="15%" align="center" bgcolor="#ffffff">
+                <img src="assets/college-logo.svg" alt="Horizon Crest Institute Logo" width="100" height="100" border="0">
+            </td>
+            <td width="85%" bgcolor="#0f766e">
+                <font color="#ffffff">
+                    <h1 align="center">Horizon Crest Institute of Technology</h1>
+                    <p align="center"><i>"Pioneering Innovation, Inspiring Excellence, Shaping Tomorrow"</i></p>
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" bgcolor="#115e59">
+                <font color="#ffffff">
+                    <b>College Navigation:</b> &nbsp;
+                    <a href="#about"><font color="#ffffff">About College</font></a> &nbsp;|&nbsp;
+                    <a href="#departments"><font color="#ffffff">Departments</font></a> &nbsp;|&nbsp;
+                    <a href="#admissions"><font color="#ffffff">Admissions</font></a> &nbsp;|&nbsp;
+                    <a href="#programs"><font color="#ffffff">Academic Programs</font></a> &nbsp;|&nbsp;
+                    <a href="#contact"><font color="#ffffff">Contact Us</font></a>
+                </font>
+            </td>
+        </tr>
+    </table>
 
-      <!-- College Navigation Bar matching screenshot -->
-      <nav class="college-nav-bar" aria-label="College Navigation">
-        <a href="#about">About College</a>
-        <span class="nav-sep">|</span>
-        <a href="#departments">Departments</a>
-        <span class="nav-sep">|</span>
-        <a href="#admissions">Admissions</a>
-        <span class="nav-sep">|</span>
-        <a href="#programs">Academic Programs</a>
-        <span class="nav-sep">|</span>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </header>
+    <hr>
 
     <!-- 2. Content: College introduction using headings, paragraphs, text formatting, images, and horizontal lines -->
-    <main>
-      <section class="content-card" id="about">
-        <h2>About Horizon Crest Institute</h2>
-        <p>
-          Welcome to <b>Horizon Crest Institute of Technology</b>, an internationally acclaimed center for higher education and cutting-edge engineering research. Established in 1994, our institution is committed to nurturing intellectual curiosity and preparing the next generation of engineers, computer scientists, and technology innovators.
-        </p>
-        <p>
-          Our sprawling <i>state-of-the-art campus</i> houses modern digital research laboratories, high-performance computing clusters, collaborative makerspaces, and advanced sports amenities. We firmly believe that <u>rigorous academic fundamentals combined with experiential learning</u> empower graduates to thrive in rapidly transforming global industries.
-        </p>
+    <a name="about"></a>
+    <h2>About Horizon Crest Institute of Technology</h2>
+    <p>
+        Established in <b>1994</b>, <b>Horizon Crest Institute of Technology</b> has evolved into one of the nation's premier institutions for undergraduate and postgraduate education in engineering, computing, and applied sciences. Our campus combines <i>cutting-edge academic research facilities</i> with an environment dedicated to <u>intellectual curiosity and ethical leadership</u>.
+    </p>
+    <p>
+        <s>We do not limit education to theoretical classroom lectures</s>; instead, we provide direct immersion in state-of-the-art laboratory environments, industry apprenticeships, and global technology hackathons.
+    </p>
 
-        <!-- Campus Image -->
-        <div class="campus-banner-wrap">
-          <img src="assets/college-campus.svg" alt="Horizon Crest Institute Main Academic Campus Banner" width="800" height="240">
-        </div>
+    <center>
+        <img src="assets/college-campus.svg" alt="Horizon Crest Institute Main Academic Campus" width="800" height="240" border="1">
+    </center>
 
-        <p>
-          With over <b>15,000 alumni</b> worldwide and collaborations with leading multinational technology organizations, Horizon Crest continues to set benchmarks in academic rigor, patent contributions, and graduate employability.
-        </p>
-      </section>
+    <hr>
 
-      <hr>
+    <!-- 3. Departments & Admissions: Use <ul> for departments and <ol> for admission steps -->
+    <a name="departments"></a>
+    <h2>Academic Departments</h2>
+    <p>Our institute currently offers specialized academic training across six established departments:</p>
+    <ul>
+        <li>Department of Computer Science &amp; Artificial Intelligence</li>
+        <li>Department of Software Engineering &amp; Cyber Systems</li>
+        <li>Department of Electrical &amp; Electronics Engineering</li>
+        <li>Department of Mechanical &amp; Mechatronics Engineering</li>
+        <li>Department of Civil &amp; Environmental Infrastructure</li>
+        <li>Department of Biomedical Engineering &amp; Health Informatics</li>
+    </ul>
 
-      <!-- 3. Departments & Admissions: Use <ul> for departments and <ol> for admission steps -->
-      <section class="content-card" id="departments">
-        <h2>Academic Departments</h2>
-        <p>Horizon Crest Institute comprises six distinguished academic departments:</p>
-        <ul id="departments-list">
-          <li>Department of Computer Science &amp; Artificial Intelligence</li>
-          <li>Department of Software Engineering &amp; Cyber Systems</li>
-          <li>Department of Electrical &amp; Computer Engineering</li>
-          <li>Department of Mechanical &amp; Aerospace Engineering</li>
-          <li>Department of Civil &amp; Environmental Infrastructure</li>
-          <li>Department of Biomedical Engineering &amp; Health Informatics</li>
-        </ul>
-      </section>
+    <hr>
 
-      <hr>
+    <a name="admissions"></a>
+    <h2>Undergraduate &amp; Graduate Admission Steps</h2>
+    <p>All candidates seeking admission to degree programs must complete the following six steps:</p>
+    <ol>
+        <li>Create an applicant account on the official Horizon Crest Online Admissions Portal.</li>
+        <li>Submit certified secondary school certificates, academic transcripts, and identity documentation.</li>
+        <li>Appear for the mandatory Horizon Crest College Aptitude &amp; Entrance Test (HCAAT).</li>
+        <li>Participate in the departmental interview and faculty counseling session.</li>
+        <li>Receive the merit-based provisional admission offer letter and accept enrollment.</li>
+        <li>Submit enrollment verification fees and attend the New Student Orientation Week.</li>
+    </ol>
 
-      <section class="content-card" id="admissions">
-        <h2>Admissions Procedure</h2>
-        <p>Prospective candidates must complete the following six sequential admission steps:</p>
-        <ol id="admission-steps-list">
-          <li>Register on the official Horizon Crest Online Admissions Portal and create an applicant profile.</li>
-          <li>Submit certified academic records, secondary school certificates, and standardized test transcripts.</li>
-          <li>Appear for the comprehensive Horizon Crest College Admission &amp; Aptitude Test (HCAAT).</li>
-          <li>Attend an academic advisory and interview session with department faculty representatives.</li>
-          <li>Receive the merit-based provisional admission offer letter and accept the enrollment agreement.</li>
-          <li>Complete tuition fee clearance, submit health records, and participate in Freshman Orientation Week.</li>
-        </ol>
-      </section>
+    <hr>
 
-      <hr>
-
-      <!-- 4. Programs: Create a table using <caption>, <thead>, <tbody>, and <tfoot>. Use colspan where appropriate -->
-      <section class="content-card" id="programs">
-        <h2>Academic Programs &amp; Tuition Structure</h2>
-        <div class="table-wrap">
-          <table id="programs-table">
-            <caption>Horizon Crest Institute of Technology — Programs &amp; Fee Overview</caption>
-            <thead>
-              <tr>
+    <!-- 4. Programs: Create a table using <caption>, <thead>, <tbody>, and <tfoot>. Use colspan where appropriate -->
+    <a name="programs"></a>
+    <h2>Academic Programs &amp; Fee Structure</h2>
+    <table width="100%" border="1" cellpadding="10" cellspacing="0">
+        <caption><h3>Horizon Crest Institute &mdash; Degree Programs and Annual Fee Overview</h3></caption>
+        <thead>
+            <tr bgcolor="#dbeafe">
                 <th>Degree Program</th>
                 <th>Duration</th>
                 <th>Academic Level</th>
-                <th colspan="2">Annual Tuition (PKR)</th>
-              </tr>
-              <tr>
+                <th colspan="2">Annual Tuition Fee (PKR)</th>
+            </tr>
+            <tr bgcolor="#eff6ff">
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>National Merit</th>
-                <th>International / Self-Finance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>BS Computer Science (BSCS)</td>
-                <td>4 Years (8 Semesters)</td>
+                <th>National Students</th>
+                <th>International Students</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>BS Computer Science (BSCS)</b></td>
+                <td>4 Years</td>
                 <td>Undergraduate</td>
-                <td>185,000</td>
-                <td>460,000</td>
-              </tr>
-              <tr>
-                <td>BS Software Engineering (BSSE)</td>
-                <td>4 Years (8 Semesters)</td>
+                <td>PKR 185,000</td>
+                <td>PKR 460,000</td>
+            </tr>
+            <tr bgcolor="#f9fafb">
+                <td><b>BS Software Engineering (BSSE)</b></td>
+                <td>4 Years</td>
                 <td>Undergraduate</td>
-                <td>190,000</td>
-                <td>475,000</td>
-              </tr>
-              <tr>
-                <td>BS Artificial Intelligence (BSAI)</td>
-                <td>4 Years (8 Semesters)</td>
+                <td>PKR 190,000</td>
+                <td>PKR 475,000</td>
+            </tr>
+            <tr>
+                <td><b>BS Artificial Intelligence (BSAI)</b></td>
+                <td>4 Years</td>
                 <td>Undergraduate</td>
-                <td>200,000</td>
-                <td>490,000</td>
-              </tr>
-              <tr>
-                <td>MS Computer Science (MSCS)</td>
-                <td>2 Years (4 Semesters)</td>
+                <td>PKR 200,000</td>
+                <td>PKR 490,000</td>
+            </tr>
+            <tr bgcolor="#f9fafb">
+                <td><b>MS Computer Science (MSCS)</b></td>
+                <td>2 Years</td>
                 <td>Graduate</td>
-                <td>220,000</td>
-                <td>520,000</td>
-              </tr>
-              <tr>
-                <td>MS Data Science &amp; Analytics</td>
-                <td>2 Years (4 Semesters)</td>
-                <td>Graduate</td>
-                <td>225,000</td>
-                <td>530,000</td>
-              </tr>
-              <tr>
-                <td>PhD Computer Engineering</td>
-                <td>3–5 Years</td>
+                <td>PKR 220,000</td>
+                <td>PKR 520,000</td>
+            </tr>
+            <tr>
+                <td><b>PhD Computer Engineering</b></td>
+                <td>3 to 5 Years</td>
                 <td>Doctoral</td>
-                <td>160,000</td>
-                <td>420,000</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3"><b>Need &amp; Merit-Based Scholarships:</b> 100% and 50% tuition fee waivers available for top 5% ranked entrants.</td>
-                <td colspan="2">For financial aid, email: financialaid@horizoncrest.edu</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
+                <td>PKR 160,000</td>
+                <td>PKR 420,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr bgcolor="#f3f4f6">
+                <td colspan="3"><b>Scholarships:</b> Up to 100% merit waivers available for top entrance scorers.</td>
+                <td colspan="2">Contact Admissions Office for eligibility details.</td>
+            </tr>
+        </tfoot>
+    </table>
 
-      <hr>
+    <hr>
 
-      <!-- 5. Contact: Include an address using <br>, an email link using mailto:, and an external link using target="_blank" -->
-      <!-- Matches user's screenshot exactly -->
-      <section class="content-card" id="contact">
-        <h2>Campus Contact &amp; Location</h2>
-        <p>
-          <b>Horizon Crest Institute Main Campus</b><br>
-          Knowledge Parkway, University Heights<br>
-          Sector H-12, Academic City, AC 45000<br>
-          Telephone: +1 (800) 555-4247
-        </p>
+    <!-- 5. Contact: Include an address using <br>, an email link using mailto:, and an external link using target="_blank" -->
+    <a name="contact"></a>
+    <h2>Campus Contact &amp; Location</h2>
+    <p>
+        <b>Horizon Crest Institute Main Campus</b><br>
+        Knowledge Parkway, University Heights<br>
+        Sector H-12, Academic City, AC 45000<br>
+        Telephone: +1 (800) 555-4247
+    </p>
 
-        <p>
-          For inquiries, email admissions:<br>
-          <a href="mailto:admissions@horizoncrest.edu">Send Email to Admissions (mailto:admissions@horizoncrest.edu)</a>
-        </p>
+    <p>
+        For inquiries, email admissions:<br>
+        <a href="mailto:admissions@horizoncrest.edu"><b>Send Email to Admissions (mailto:admissions@horizoncrest.edu)</b></a>
+    </p>
 
-        <p>
-          Visit Higher Education Commission Portal:<br>
-          <a href="https://www.hec.gov.pk" target="_blank">HEC Accreditation Portal (Opens in New Tab)</a>
-        </p>
-      </section>
-    </main>
+    <p>
+        Visit Higher Education Commission Portal:<br>
+        <a href="https://www.hec.gov.pk" target="_blank"><b>HEC Accreditation Portal (Opens in New Tab)</b></a>
+    </p>
+
+    <hr size="2">
 
     <!-- 6. Footer: Create a footer using an HTML table and display copyright information -->
-    <footer style="margin-top: 2rem;">
-      <table width="100%" style="border-collapse: collapse; text-align: center;">
+    <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#f8fafc">
         <tr>
-          <td style="padding: 1.5rem; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.88rem; box-shadow: var(--shadow-card);">
-            &copy; 2026 Horizon Crest Institute of Technology. All Rights Reserved. | Accredited by Higher Education Commission (HEC) | Chartered by Government of Pakistan
-          </td>
+            <td align="center">
+                <p><b>&copy; 2026 Horizon Crest Institute of Technology. All Rights Reserved.</b><br>
+                <small>Accredited by Higher Education Commission (HEC) | Chartered by Government of Pakistan | Web Tech Lab 01 (Task 4)</small></p>
+            </td>
         </tr>
-      </table>
-    </footer>
-
-  </div>
+    </table>
 
 </body>
 </html>

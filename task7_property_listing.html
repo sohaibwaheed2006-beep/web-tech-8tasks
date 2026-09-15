@@ -1,161 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 7 — Property Listing Form | Web Tech Lab 01</title>
-  <meta name="description" content="Real estate property listing form for Web Technologies Graded Lab Task 01.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Question 7: Real Estate Property Listing Form</title>
 </head>
 <body>
 
-  <nav class="topnav">
-    <a href="index.html" class="brand">Lab 01 Portal</a>
-    <a href="task1_student_profile.html">T1</a>
-    <a href="task2_department_website.html">T2</a>
-    <a href="task3_restaurant_website.html">T3</a>
-    <a href="task4_college_website.html">T4</a>
-    <a href="task5_hotel_booking.html">T5</a>
-    <a href="task6_job_application.html">T6</a>
-    <a href="task7_property_listing.html" class="active">T7: Property</a>
-    <a href="task8_event_registration.html">T8</a>
-  </nav>
+    <!-- Main Navigation Bar -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#f0f4f8">
+        <tr>
+            <td align="center">
+                <a href="index.html"><b>&larr; Return to Dashboard Hub</b></a> |
+                <a href="task1_student_profile.html">Task 1</a> |
+                <a href="task2_department_website.html">Task 2</a> |
+                <a href="task3_restaurant_website.html">Task 3</a> |
+                <a href="task4_college_website.html">Task 4</a> |
+                <a href="task5_hotel_booking.html">Task 5</a> |
+                <a href="task6_job_application.html">Task 6</a> |
+                <a href="task7_property_listing.html"><b>Task 7: Property Form</b></a> |
+                <a href="task8_event_registration.html">Task 8</a>
+            </td>
+        </tr>
+    </table>
 
-  <div class="page-wrap">
+    <hr size="3" color="#000000">
 
-    <div class="page-header">
-      <span class="task-badge">Task 07</span>
-      <h1>Property Listing Submission</h1>
-      <p>NestFinder Realty — List your property with us. Fill in all the details below.</p>
-    </div>
+    <center>
+        <h1>PrimeHaven Real Estate &amp; Property Portal</h1>
+        <p><b>Online Real Estate Property Listing Submission Form</b></p>
+    </center>
 
-    <div class="content-card">
-      <h2>Property Details Form</h2>
-      <form id="property-listing-form" action="#" method="post" enctype="multipart/form-data">
+    <hr>
 
-        <div class="form-grid">
+    <!-- Question 7 Form Container -->
+    <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend><b>Real Estate Property Listing Details</b></legend>
+            <br>
+            <table width="100%" border="1" cellpadding="10" cellspacing="0">
+                <!-- 1. Owner name -->
+                <tr>
+                    <td width="30%"><b>1. Property Owner / Agent Name:</b></td>
+                    <td width="70%">
+                        <input type="text" name="owner_name" size="40" placeholder="Enter owner's full legal name" required>
+                    </td>
+                </tr>
 
-          <!-- 1. Property Title -->
-          <div class="form-group full">
-            <label for="property-title">Property Title <span class="required">*</span></label>
-            <input type="text" id="property-title" name="property_title" placeholder="e.g. 3-Bed Modern Apartment in DHA Phase 5" required>
-          </div>
+                <!-- 2. Email -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>2. Owner Contact Email:</b></td>
+                    <td>
+                        <input type="email" name="owner_email" size="40" placeholder="owner@realestate.com" required>
+                    </td>
+                </tr>
 
-          <!-- 2. Property Type -->
-          <div class="form-group">
-            <label for="property-type">Property Type <span class="required">*</span></label>
-            <select id="property-type" name="property_type" required>
-              <option value="" disabled selected>-- Select Type --</option>
-              <option value="apartment">Apartment / Flat</option>
-              <option value="house">Independent House</option>
-              <option value="villa">Villa</option>
-              <option value="commercial-shop">Commercial Shop</option>
-              <option value="office-space">Office Space</option>
-              <option value="plot">Plot / Land</option>
-              <option value="farmhouse">Farmhouse</option>
-            </select>
-          </div>
+                <!-- 3. Phone -->
+                <tr>
+                    <td><b>3. Contact Phone / Mobile Number:</b></td>
+                    <td>
+                        <input type="tel" name="owner_phone" size="30" placeholder="+92-300-9876543" required>
+                    </td>
+                </tr>
 
-          <!-- 3. Asking Price -->
-          <div class="form-group">
-            <label for="asking-price">Asking Price (PKR) <span class="required">*</span></label>
-            <input type="number" id="asking-price" name="asking_price" min="0" placeholder="e.g. 12000000" required>
-          </div>
+                <!-- 4. Property type using dropdown -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>4. Property Category Type (Dropdown):</b></td>
+                    <td>
+                        <select name="property_type" required>
+                            <option value="">-- Please Select Property Classification --</option>
+                            <option value="residential_house">Residential Independent House / Villa</option>
+                            <option value="luxury_apartment">Luxury Multi-Story Apartment / Flat</option>
+                            <option value="commercial_plaza">Commercial Office Plaza</option>
+                            <option value="retail_shop">Retail Commercial Shop</option>
+                            <option value="residential_plot">Residential Plot / Land Parcel</option>
+                            <option value="luxury_farmhouse">Agricultural Farmhouse Estate</option>
+                        </select>
+                    </td>
+                </tr>
 
-          <!-- 4. Location / City -->
-          <div class="form-group">
-            <label for="property-city">City / Location <span class="required">*</span></label>
-            <input type="text" id="property-city" name="property_city" list="cities-list" placeholder="Start typing city..." required>
-            <datalist id="cities-list">
-              <option value="Islamabad">
-              <option value="Lahore">
-              <option value="Karachi">
-              <option value="Rawalpindi">
-              <option value="Faisalabad">
-              <option value="Peshawar">
-              <option value="Quetta">
-              <option value="Multan">
-            </datalist>
-          </div>
+                <!-- 5. City using datalist -->
+                <tr>
+                    <td><b>5. City Location (Datalist):</b></td>
+                    <td>
+                        <input list="real_estate_cities" name="property_city" placeholder="Search or select city name" required>
+                        <datalist id="real_estate_cities">
+                            <option value="Islamabad">
+                            <option value="Rawalpindi">
+                            <option value="Lahore">
+                            <option value="Karachi">
+                            <option value="Peshawar">
+                            <option value="Faisalabad">
+                            <option value="Multan">
+                            <option value="Gwadar">
+                        </datalist>
+                    </td>
+                </tr>
 
-          <!-- 5. Area Size -->
-          <div class="form-group">
-            <label for="property-size">Area Size (sq. ft.) <span class="required">*</span></label>
-            <input type="number" id="property-size" name="property_size" min="0" placeholder="e.g. 2200" required>
-          </div>
+                <!-- 6. Number of bedrooms -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>6. Number of Bedrooms:</b></td>
+                    <td>
+                        <input type="number" name="num_bedrooms" min="0" max="25" value="3" required>
+                    </td>
+                </tr>
 
-          <!-- 6. Number of Bedrooms -->
-          <div class="form-group">
-            <label for="num-bedrooms">Number of Bedrooms</label>
-            <input type="number" id="num-bedrooms" name="num_bedrooms" min="0" max="20" placeholder="e.g. 3">
-          </div>
+                <!-- 7. Price -->
+                <tr>
+                    <td><b>7. Property Asking Price (PKR):</b></td>
+                    <td>
+                        <input type="number" name="property_price" min="100000" step="100000" placeholder="e.g. 18500000" required>
+                    </td>
+                </tr>
 
-          <!-- 7. Amenities (Checkboxes) -->
-          <div class="form-group full">
-            <label>Available Amenities</label>
-            <div class="check-group" id="amenities-group">
-              <label><input type="checkbox" name="amenity" value="gas"> Sui Gas</label>
-              <label><input type="checkbox" name="amenity" value="electricity"> Electricity (WAPDA)</label>
-              <label><input type="checkbox" name="amenity" value="water"> Water Supply</label>
-              <label><input type="checkbox" name="amenity" value="security"> Gated Community / Security</label>
-              <label><input type="checkbox" name="amenity" value="parking"> Car Parking</label>
-              <label><input type="checkbox" name="amenity" value="generator"> Backup Generator</label>
-              <label><input type="checkbox" name="amenity" value="elevator"> Elevator / Lift</label>
-              <label><input type="checkbox" name="amenity" value="garden"> Garden / Lawn</label>
-            </div>
-          </div>
+                <!-- 8. Property availability date -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>8. Property Availability Date:</b></td>
+                    <td>
+                        <input type="date" name="availability_date" required>
+                    </td>
+                </tr>
 
-          <!-- 8. Listing Status (Radio) -->
-          <div class="form-group full">
-            <label>Listing Status <span class="required">*</span></label>
-            <div class="radio-group" id="status-group">
-              <label><input type="radio" name="listing_status" value="for-sale" required> For Sale</label>
-              <label><input type="radio" name="listing_status" value="for-rent"> For Rent</label>
-              <label><input type="radio" name="listing_status" value="lease"> Long-Term Lease</label>
-            </div>
-          </div>
+                <!-- 9. Property website URL -->
+                <tr>
+                    <td><b>9. Virtual Tour / Property Website URL:</b></td>
+                    <td>
+                        <input type="url" name="property_url" size="40" placeholder="https://www.primehaven.com/property/101">
+                    </td>
+                </tr>
 
-          <!-- 9. Property Description -->
-          <div class="form-group full">
-            <label for="property-desc">Property Description <span class="required">*</span></label>
-            <textarea id="property-desc" name="property_desc" rows="5" placeholder="Describe the property: condition, nearby landmarks, unique features..." required></textarea>
-          </div>
+                <!-- 10. Property description -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>10. Comprehensive Property Description:</b></td>
+                    <td>
+                        <textarea name="property_description" rows="5" cols="55" placeholder="Detail architectural highlights, floor size in square feet/marla, nearby landmarks, accessibility, and unique amenities..." required></textarea>
+                    </td>
+                </tr>
 
-          <!-- 10. Contact Name -->
-          <div class="form-group">
-            <label for="contact-name">Contact Person Name <span class="required">*</span></label>
-            <input type="text" id="contact-name" name="contact_name" placeholder="Your name" required>
-          </div>
+                <!-- 11. Upload property images -->
+                <tr>
+                    <td><b>11. Upload Property Images (&lt;input type="file"&gt;):</b></td>
+                    <td>
+                        <input type="file" name="property_images" accept="image/*" multiple required>
+                        <br><small>(Accepted image formats: JPG, PNG, WEBP &mdash; You may select multiple pictures)</small>
+                    </td>
+                </tr>
 
-          <!-- 11. Contact Phone -->
-          <div class="form-group">
-            <label for="contact-phone">Contact Phone <span class="required">*</span></label>
-            <input type="tel" id="contact-phone" name="contact_phone" placeholder="+92-300-0000000" required>
-          </div>
+                <!-- 12. Select property features using checkboxes -->
+                <tr bgcolor="#f9fafb">
+                    <td><b>12. Select Property Features &amp; Utilities (Checkboxes):</b></td>
+                    <td>
+                        <input type="checkbox" name="feat_gas" value="yes" checked> Sui Natural Gas &nbsp;&nbsp;
+                        <input type="checkbox" name="feat_electricity" value="yes" checked> 3-Phase Electricity &nbsp;&nbsp;
+                        <input type="checkbox" name="feat_water" value="yes" checked> Sweet Water Bore &nbsp;&nbsp;<br>
+                        <input type="checkbox" name="feat_security" value="yes"> 24/7 Gated Security &nbsp;&nbsp;
+                        <input type="checkbox" name="feat_parking" value="yes"> Covered Car Garage &nbsp;&nbsp;
+                        <input type="checkbox" name="feat_generator" value="yes"> Backup Generator &nbsp;&nbsp;
+                        <input type="checkbox" name="feat_lawn" value="yes"> Landscaped Lawn / Garden
+                    </td>
+                </tr>
 
-          <!-- 12. Property Images Upload -->
-          <div class="form-group full">
-            <label for="property-images">Upload Property Images (JPG, PNG &mdash; max 5 files)</label>
-            <input type="file" id="property-images" name="property_images" accept="image/jpeg,image/png" multiple>
-          </div>
+                <!-- 13. Submit button -->
+                <tr bgcolor="#e2e8f0">
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Publish Real Estate Property Listing">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
 
-          <!-- Submit & Reset -->
-          <div class="form-group full">
-            <div class="btn-row">
-              <button type="submit" id="property-submit-btn">Submit Listing</button>
-              <button type="reset" id="property-reset-btn">Reset Form</button>
-            </div>
-          </div>
+    <hr size="2">
 
-        </div>
-      </form>
-    </div>
-
-    <footer class="site-footer">
-      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 7: Property Listing Form</p>
-    </footer>
-
-  </div>
+    <center>
+        <p><small>&copy; 2026 PrimeHaven Real Estate &amp; Properties | Web Technologies Lab 01 (Task 7)</small></p>
+    </center>
 
 </body>
 </html>
