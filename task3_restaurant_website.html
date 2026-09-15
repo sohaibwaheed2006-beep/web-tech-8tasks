@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 — Spice Route Restaurant | Web Tech Lab 01</title>
+  <meta name="description" content="Online food restaurant website for Web Technologies Graded Lab Task 01.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .restaurant-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .restaurant-logo img {
+      width: 90px;
+      height: 90px;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--amber-500);
+    }
+    .restaurant-logo .logo-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #b45309;
+      line-height: 1.1;
+    }
+    .restaurant-logo .logo-tagline {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="brand">Lab 01 Portal</a>
+    <a href="task1_student_profile.html">T1</a>
+    <a href="task2_department_website.html">T2</a>
+    <a href="task3_restaurant_website.html" class="active">T3: Restaurant</a>
+    <a href="task4_college_website.html">T4</a>
+    <a href="task5_hotel_booking.html">T5</a>
+    <a href="task6_job_application.html">T6</a>
+    <a href="task7_property_listing.html">T7</a>
+    <a href="task8_event_registration.html">T8</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <span class="task-badge">Task 03</span>
+      <div class="restaurant-logo">
+        <img src="assets/restaurant-logo.svg" alt="Spice Route Restaurant Logo" id="restaurant-logo-img" width="90" height="90">
+        <div>
+          <div class="logo-text">Spice Route</div>
+          <div class="logo-tagline">Authentic Flavours from the Heart of Asia</div>
+        </div>
+      </div>
+      <p>Order online &bull; Dine in &bull; Catering available</p>
+    </div>
+
+    <!-- Menu -->
+    <div class="content-card">
+      <h2>Our Menu</h2>
+      <ul id="menu-list">
+        <li>Chicken Biryani &mdash; Fragrant basmati rice with spiced chicken</li>
+        <li>Mutton Karahi &mdash; Slow-cooked mutton in tomato-based sauce</li>
+        <li>Dal Makhani &mdash; Creamy black lentils simmered overnight</li>
+        <li>Grilled Seekh Kebab &mdash; Minced beef skewers with herbs</li>
+        <li>Paneer Tikka &mdash; Marinated cottage cheese grilled in tandoor</li>
+        <li>Mango Lassi &mdash; Chilled yogurt mango blend</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Preparation Process -->
+    <div class="content-card">
+      <h2>Our Preparation Process</h2>
+      <ol id="prep-steps-list">
+        <li>Source fresh, locally procured ingredients every morning.</li>
+        <li>Marinate proteins with handcrafted spice blends for minimum 4 hours.</li>
+        <li>Slow-cook curries and gravies over traditional flame for depth of flavour.</li>
+        <li>Finish dishes in a tandoor clay oven at 450°C for authentic char.</li>
+        <li>Plate with garnishes of fresh coriander, lemon, and house chutney.</li>
+      </ol>
+    </div>
+
+    <hr>
+
+    <!-- Food Table -->
+    <div class="content-card">
+      <h2>Popular Dishes &amp; Pricing</h2>
+      <div class="table-wrap">
+        <table id="food-menu-table">
+          <caption>Spice Route — Featured Dishes Menu</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Dish Name</th>
+              <th>Category</th>
+              <th>Price (PKR)</th>
+              <th>Preparation Time</th>
+              <th>Serving Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Chicken Biryani</td>
+              <td>Rice</td>
+              <td>550</td>
+              <td>25 mins</td>
+              <td>1–2 persons</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mutton Karahi</td>
+              <td>Main Course</td>
+              <td>950</td>
+              <td>40 mins</td>
+              <td>2–3 persons</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Dal Makhani</td>
+              <td>Vegetarian</td>
+              <td>380</td>
+              <td>20 mins</td>
+              <td>1 person</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Grilled Seekh Kebab</td>
+              <td>BBQ</td>
+              <td>480</td>
+              <td>15 mins</td>
+              <td>4 pieces</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Paneer Tikka</td>
+              <td>Vegetarian</td>
+              <td>420</td>
+              <td>20 mins</td>
+              <td>6 pieces</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Mango Lassi</td>
+              <td>Beverage</td>
+              <td>150</td>
+              <td>5 mins</td>
+              <td>1 glass (400ml)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Contact -->
+    <div class="content-card">
+      <h2>Contact &amp; Location</h2>
+      <p>
+        We are open daily from <b>11:00 AM to 11:00 PM</b>.<br>
+        To place an order or make a reservation, reach us at:
+        <a href="mailto:orders@spiceroute.pk" id="restaurant-email-link">orders@spiceroute.pk</a>
+      </p>
+
+      <hr>
+
+      <address id="restaurant-address">
+        <b>Spice Route Restaurant</b><br>
+        Plot 14, Blue Area,<br>
+        F-6 Markaz, Islamabad,<br>
+        Pakistan — 44000<br>
+        Phone: +92-51-1234567
+      </address>
+    </div>
+
+    <footer class="site-footer">
+      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 3: Restaurant Website</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

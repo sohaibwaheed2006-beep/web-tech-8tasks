@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5 — Hotel Room Booking | Web Tech Lab 01</title>
+  <meta name="description" content="Hotel room booking form for Web Technologies Graded Lab Task 01.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="brand">Lab 01 Portal</a>
+    <a href="task1_student_profile.html">T1</a>
+    <a href="task2_department_website.html">T2</a>
+    <a href="task3_restaurant_website.html">T3</a>
+    <a href="task4_college_website.html">T4</a>
+    <a href="task5_hotel_booking.html" class="active">T5: Hotel</a>
+    <a href="task6_job_application.html">T6</a>
+    <a href="task7_property_listing.html">T7</a>
+    <a href="task8_event_registration.html">T8</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <span class="task-badge">Task 05</span>
+      <h1>Azure Grand Hotel</h1>
+      <p>Complete the form below to reserve your room. All fields marked <b>*</b> are required.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Room Booking Reservation Form</h2>
+      <form id="hotel-booking-form" action="#" method="post">
+
+        <div class="form-grid">
+
+          <!-- 1. Guest Full Name -->
+          <div class="form-group">
+            <label for="guest-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="guest-name" name="guest_name" placeholder="e.g. Ali Hassan" required>
+          </div>
+
+          <!-- 2. Email Address -->
+          <div class="form-group">
+            <label for="guest-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="guest-email" name="guest_email" placeholder="you@example.com" required>
+          </div>
+
+          <!-- 3. Password -->
+          <div class="form-group">
+            <label for="booking-password">Account Password <span class="required">*</span></label>
+            <input type="password" id="booking-password" name="password" placeholder="Create a secure password" required>
+          </div>
+
+          <!-- 4. Number of Guests -->
+          <div class="form-group">
+            <label for="num-guests">Number of Guests <span class="required">*</span></label>
+            <input type="number" id="num-guests" name="num_guests" min="1" max="10" placeholder="1" required>
+          </div>
+
+          <!-- 5. Room Type Select -->
+          <div class="form-group">
+            <label for="room-type">Room Type <span class="required">*</span></label>
+            <select id="room-type" name="room_type" required>
+              <option value="" disabled selected>-- Select Room Type --</option>
+              <option value="standard-single">Standard Single Room</option>
+              <option value="deluxe-double">Deluxe Double Room</option>
+              <option value="executive-suite">Executive Suite</option>
+              <option value="presidential-suite">Presidential Suite</option>
+              <option value="family-room">Family Room (Sleeps 4)</option>
+            </select>
+          </div>
+
+          <!-- 6. Gender (Radio) -->
+          <div class="form-group">
+            <label>Gender <span class="required">*</span></label>
+            <div class="radio-group" id="gender-group">
+              <label><input type="radio" name="gender" value="male" required> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label>
+              <label><input type="radio" name="gender" value="prefer-not"> Prefer not to say</label>
+            </div>
+          </div>
+
+          <!-- 7. Facilities (Checkboxes) -->
+          <div class="form-group full">
+            <label>Preferred Facilities</label>
+            <div class="check-group" id="facilities-group">
+              <label><input type="checkbox" name="facility" value="wifi"> Free Wi-Fi</label>
+              <label><input type="checkbox" name="facility" value="breakfast"> Complimentary Breakfast</label>
+              <label><input type="checkbox" name="facility" value="pool"> Swimming Pool Access</label>
+              <label><input type="checkbox" name="facility" value="gym"> Fitness Centre</label>
+              <label><input type="checkbox" name="facility" value="spa"> Spa &amp; Wellness</label>
+              <label><input type="checkbox" name="facility" value="parking"> Secure Parking</label>
+            </div>
+          </div>
+
+          <!-- 8. Check-in Date -->
+          <div class="form-group">
+            <label for="checkin-date">Check-in Date <span class="required">*</span></label>
+            <input type="date" id="checkin-date" name="checkin_date" required>
+          </div>
+
+          <!-- 9. Check-out Date -->
+          <div class="form-group">
+            <label for="checkout-date">Check-out Date <span class="required">*</span></label>
+            <input type="date" id="checkout-date" name="checkout_date" required>
+          </div>
+
+          <!-- 10. Arrival Time -->
+          <div class="form-group">
+            <label for="arrival-time">Expected Arrival Time</label>
+            <input type="time" id="arrival-time" name="arrival_time">
+          </div>
+
+          <!-- 11. Website URL -->
+          <div class="form-group">
+            <label for="guest-website">Personal/Business Website</label>
+            <input type="url" id="guest-website" name="guest_website" placeholder="https://yourwebsite.com">
+          </div>
+
+          <!-- 12. Submit & Reset -->
+          <div class="form-group full">
+            <div class="btn-row">
+              <button type="submit" id="booking-submit-btn">Confirm Reservation</button>
+              <button type="reset" id="booking-reset-btn">Clear Form</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <footer class="site-footer">
+      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 5: Hotel Booking Form</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

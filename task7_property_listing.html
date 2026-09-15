@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 7 — Property Listing Form | Web Tech Lab 01</title>
+  <meta name="description" content="Real estate property listing form for Web Technologies Graded Lab Task 01.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="brand">Lab 01 Portal</a>
+    <a href="task1_student_profile.html">T1</a>
+    <a href="task2_department_website.html">T2</a>
+    <a href="task3_restaurant_website.html">T3</a>
+    <a href="task4_college_website.html">T4</a>
+    <a href="task5_hotel_booking.html">T5</a>
+    <a href="task6_job_application.html">T6</a>
+    <a href="task7_property_listing.html" class="active">T7: Property</a>
+    <a href="task8_event_registration.html">T8</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <span class="task-badge">Task 07</span>
+      <h1>Property Listing Submission</h1>
+      <p>NestFinder Realty — List your property with us. Fill in all the details below.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Property Details Form</h2>
+      <form id="property-listing-form" action="#" method="post" enctype="multipart/form-data">
+
+        <div class="form-grid">
+
+          <!-- 1. Property Title -->
+          <div class="form-group full">
+            <label for="property-title">Property Title <span class="required">*</span></label>
+            <input type="text" id="property-title" name="property_title" placeholder="e.g. 3-Bed Modern Apartment in DHA Phase 5" required>
+          </div>
+
+          <!-- 2. Property Type -->
+          <div class="form-group">
+            <label for="property-type">Property Type <span class="required">*</span></label>
+            <select id="property-type" name="property_type" required>
+              <option value="" disabled selected>-- Select Type --</option>
+              <option value="apartment">Apartment / Flat</option>
+              <option value="house">Independent House</option>
+              <option value="villa">Villa</option>
+              <option value="commercial-shop">Commercial Shop</option>
+              <option value="office-space">Office Space</option>
+              <option value="plot">Plot / Land</option>
+              <option value="farmhouse">Farmhouse</option>
+            </select>
+          </div>
+
+          <!-- 3. Asking Price -->
+          <div class="form-group">
+            <label for="asking-price">Asking Price (PKR) <span class="required">*</span></label>
+            <input type="number" id="asking-price" name="asking_price" min="0" placeholder="e.g. 12000000" required>
+          </div>
+
+          <!-- 4. Location / City -->
+          <div class="form-group">
+            <label for="property-city">City / Location <span class="required">*</span></label>
+            <input type="text" id="property-city" name="property_city" list="cities-list" placeholder="Start typing city..." required>
+            <datalist id="cities-list">
+              <option value="Islamabad">
+              <option value="Lahore">
+              <option value="Karachi">
+              <option value="Rawalpindi">
+              <option value="Faisalabad">
+              <option value="Peshawar">
+              <option value="Quetta">
+              <option value="Multan">
+            </datalist>
+          </div>
+
+          <!-- 5. Area Size -->
+          <div class="form-group">
+            <label for="property-size">Area Size (sq. ft.) <span class="required">*</span></label>
+            <input type="number" id="property-size" name="property_size" min="0" placeholder="e.g. 2200" required>
+          </div>
+
+          <!-- 6. Number of Bedrooms -->
+          <div class="form-group">
+            <label for="num-bedrooms">Number of Bedrooms</label>
+            <input type="number" id="num-bedrooms" name="num_bedrooms" min="0" max="20" placeholder="e.g. 3">
+          </div>
+
+          <!-- 7. Amenities (Checkboxes) -->
+          <div class="form-group full">
+            <label>Available Amenities</label>
+            <div class="check-group" id="amenities-group">
+              <label><input type="checkbox" name="amenity" value="gas"> Sui Gas</label>
+              <label><input type="checkbox" name="amenity" value="electricity"> Electricity (WAPDA)</label>
+              <label><input type="checkbox" name="amenity" value="water"> Water Supply</label>
+              <label><input type="checkbox" name="amenity" value="security"> Gated Community / Security</label>
+              <label><input type="checkbox" name="amenity" value="parking"> Car Parking</label>
+              <label><input type="checkbox" name="amenity" value="generator"> Backup Generator</label>
+              <label><input type="checkbox" name="amenity" value="elevator"> Elevator / Lift</label>
+              <label><input type="checkbox" name="amenity" value="garden"> Garden / Lawn</label>
+            </div>
+          </div>
+
+          <!-- 8. Listing Status (Radio) -->
+          <div class="form-group full">
+            <label>Listing Status <span class="required">*</span></label>
+            <div class="radio-group" id="status-group">
+              <label><input type="radio" name="listing_status" value="for-sale" required> For Sale</label>
+              <label><input type="radio" name="listing_status" value="for-rent"> For Rent</label>
+              <label><input type="radio" name="listing_status" value="lease"> Long-Term Lease</label>
+            </div>
+          </div>
+
+          <!-- 9. Property Description -->
+          <div class="form-group full">
+            <label for="property-desc">Property Description <span class="required">*</span></label>
+            <textarea id="property-desc" name="property_desc" rows="5" placeholder="Describe the property: condition, nearby landmarks, unique features..." required></textarea>
+          </div>
+
+          <!-- 10. Contact Name -->
+          <div class="form-group">
+            <label for="contact-name">Contact Person Name <span class="required">*</span></label>
+            <input type="text" id="contact-name" name="contact_name" placeholder="Your name" required>
+          </div>
+
+          <!-- 11. Contact Phone -->
+          <div class="form-group">
+            <label for="contact-phone">Contact Phone <span class="required">*</span></label>
+            <input type="tel" id="contact-phone" name="contact_phone" placeholder="+92-300-0000000" required>
+          </div>
+
+          <!-- 12. Property Images Upload -->
+          <div class="form-group full">
+            <label for="property-images">Upload Property Images (JPG, PNG &mdash; max 5 files)</label>
+            <input type="file" id="property-images" name="property_images" accept="image/jpeg,image/png" multiple>
+          </div>
+
+          <!-- Submit & Reset -->
+          <div class="form-group full">
+            <div class="btn-row">
+              <button type="submit" id="property-submit-btn">Submit Listing</button>
+              <button type="reset" id="property-reset-btn">Reset Form</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <footer class="site-footer">
+      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 7: Property Listing Form</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

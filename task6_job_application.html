@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 6 — Job Application Form | Web Tech Lab 01</title>
+  <meta name="description" content="Job application form for Web Technologies Graded Lab Task 01.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="brand">Lab 01 Portal</a>
+    <a href="task1_student_profile.html">T1</a>
+    <a href="task2_department_website.html">T2</a>
+    <a href="task3_restaurant_website.html">T3</a>
+    <a href="task4_college_website.html">T4</a>
+    <a href="task5_hotel_booking.html">T5</a>
+    <a href="task6_job_application.html" class="active">T6: Job Form</a>
+    <a href="task7_property_listing.html">T7</a>
+    <a href="task8_event_registration.html">T8</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <span class="task-badge">Task 06</span>
+      <h1>Job Application Form</h1>
+      <p>TechNova Solutions — Careers Portal. Apply for open positions below.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Applicant Information</h2>
+      <form id="job-application-form" action="#" method="post" enctype="multipart/form-data">
+
+        <div class="form-grid">
+
+          <!-- 1. Full Name -->
+          <div class="form-group">
+            <label for="applicant-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="applicant-name" name="applicant_name" placeholder="Your full name" required>
+          </div>
+
+          <!-- 2. Email -->
+          <div class="form-group">
+            <label for="applicant-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="applicant-email" name="applicant_email" placeholder="you@email.com" required>
+          </div>
+
+          <!-- 3. Phone Number -->
+          <div class="form-group">
+            <label for="applicant-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="applicant-phone" name="applicant_phone" placeholder="+92-300-1234567" required>
+          </div>
+
+          <!-- 4. Position Applied For (Datalist) -->
+          <div class="form-group">
+            <label for="position-applied">Position Applied For <span class="required">*</span></label>
+            <input type="text" id="position-applied" name="position" list="positions-list" placeholder="Start typing..." required>
+            <datalist id="positions-list">
+              <option value="Frontend Developer">
+              <option value="Backend Developer">
+              <option value="Full Stack Developer">
+              <option value="UI/UX Designer">
+              <option value="Data Scientist">
+              <option value="DevOps Engineer">
+              <option value="Project Manager">
+              <option value="QA Engineer">
+              <option value="Mobile App Developer">
+              <option value="Cybersecurity Analyst">
+            </datalist>
+          </div>
+
+          <!-- 5. Years of Experience -->
+          <div class="form-group">
+            <label for="experience-years">Years of Experience</label>
+            <input type="number" id="experience-years" name="experience_years" min="0" max="50" placeholder="e.g. 3">
+          </div>
+
+          <!-- 6. Portfolio / LinkedIn URL -->
+          <div class="form-group">
+            <label for="portfolio-url">Portfolio / LinkedIn URL</label>
+            <input type="url" id="portfolio-url" name="portfolio_url" placeholder="https://linkedin.com/in/yourname">
+          </div>
+
+          <!-- 7. Technical Skills (Checkboxes) -->
+          <div class="form-group full">
+            <label>Technical Skills <span class="required">*</span></label>
+            <div class="check-group" id="skills-group">
+              <label><input type="checkbox" name="skill" value="html-css"> HTML &amp; CSS</label>
+              <label><input type="checkbox" name="skill" value="javascript"> JavaScript</label>
+              <label><input type="checkbox" name="skill" value="python"> Python</label>
+              <label><input type="checkbox" name="skill" value="react"> React / Vue</label>
+              <label><input type="checkbox" name="skill" value="nodejs"> Node.js</label>
+              <label><input type="checkbox" name="skill" value="sql"> SQL / Databases</label>
+              <label><input type="checkbox" name="skill" value="git"> Git &amp; Version Control</label>
+              <label><input type="checkbox" name="skill" value="docker"> Docker / Kubernetes</label>
+            </div>
+          </div>
+
+          <!-- 8. Availability (Radio) -->
+          <div class="form-group full">
+            <label>Availability <span class="required">*</span></label>
+            <div class="radio-group" id="availability-group">
+              <label><input type="radio" name="availability" value="immediately" required> Immediately</label>
+              <label><input type="radio" name="availability" value="two-weeks"> Within 2 Weeks</label>
+              <label><input type="radio" name="availability" value="one-month"> Within 1 Month</label>
+              <label><input type="radio" name="availability" value="negotiable"> Negotiable</label>
+            </div>
+          </div>
+
+          <!-- 9. Expected Salary -->
+          <div class="form-group">
+            <label for="expected-salary">Expected Monthly Salary (PKR)</label>
+            <input type="number" id="expected-salary" name="expected_salary" min="0" placeholder="e.g. 80000">
+          </div>
+
+          <!-- 10. Application Date -->
+          <div class="form-group">
+            <label for="application-date">Application Date <span class="required">*</span></label>
+            <input type="date" id="application-date" name="application_date" required>
+          </div>
+
+          <!-- 11. Cover Letter -->
+          <div class="form-group full">
+            <label for="cover-letter">Cover Letter <span class="required">*</span></label>
+            <textarea id="cover-letter" name="cover_letter" rows="5" placeholder="Tell us why you are the ideal candidate..." required></textarea>
+          </div>
+
+          <!-- 12. CV / Resume Upload -->
+          <div class="form-group full">
+            <label for="resume-upload">Upload Resume / CV (PDF or DOCX) <span class="required">*</span></label>
+            <input type="file" id="resume-upload" name="resume" accept=".pdf,.doc,.docx" required>
+          </div>
+
+          <!-- Submit & Reset -->
+          <div class="form-group full">
+            <div class="btn-row">
+              <button type="submit" id="job-submit-btn">Submit Application</button>
+              <button type="reset" id="job-reset-btn">Clear All Fields</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <footer class="site-footer">
+      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 6: Job Application Form</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

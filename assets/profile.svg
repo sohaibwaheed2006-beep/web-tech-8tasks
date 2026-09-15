@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbd2ad" />
+      <stop offset="100%" stop-color="#e2a679" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="140" fill="url(#avatarGrad)" />
+  
+  <!-- Subtle Glow / Rings -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="6,6" />
+  
+  <!-- Person Body / Blazer -->
+  <path d="M 60 280 C 65 210 110 195 150 195 C 190 195 235 210 240 280 Z" fill="#1e293b" filter="url(#dropShadow)" />
+  <!-- Shirt & Tie -->
+  <path d="M 125 195 L 150 250 L 175 195 Z" fill="#f8fafc" />
+  <path d="M 144 205 L 156 205 L 158 260 L 150 270 L 142 260 Z" fill="#0284c7" />
+  
+  <!-- Neck -->
+  <rect x="135" y="155" width="30" height="35" rx="5" fill="url(#skinGrad)" />
+  
+  <!-- Head -->
+  <ellipse cx="150" cy="125" rx="42" ry="50" fill="url(#skinGrad)" filter="url(#dropShadow)" />
+  
+  <!-- Hair -->
+  <path d="M 106 125 C 104 80 130 65 150 65 C 175 65 196 80 194 125 C 185 110 175 105 150 105 C 125 105 115 110 106 125 Z" fill="#1e293b" />
+  
+  <!-- Glasses -->
+  <circle cx="134" cy="125" r="14" fill="none" stroke="#0f172a" stroke-width="3" />
+  <circle cx="166" cy="125" r="14" fill="none" stroke="#0f172a" stroke-width="3" />
+  <line x1="148" y1="125" x2="152" y2="125" stroke="#0f172a" stroke-width="3" />
+  <line x1="108" y1="123" x2="120" y2="123" stroke="#0f172a" stroke-width="3" />
+  <line x1="180" y1="123" x2="192" y2="123" stroke="#0f172a" stroke-width="3" />
+  
+  <!-- Smile -->
+  <path d="M 140 148 Q 150 156 160 148" fill="none" stroke="#a16207" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Academic Badge Pin -->
+  <circle cx="105" cy="245" r="10" fill="#f59e0b" />
+  <polygon points="105,238 108,244 114,244 109,248 111,254 105,250 99,254 101,248 96,244 102,244" fill="#ffffff" />
+</svg>

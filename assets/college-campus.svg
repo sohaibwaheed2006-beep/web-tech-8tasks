@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="240">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+    <linearGradient id="building1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <linearGradient id="buildingGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="800" height="240" rx="12" fill="url(#sky)" />
+  
+  <!-- Clouds -->
+  <circle cx="120" cy="50" r="28" fill="rgba(255,255,255,0.7)" />
+  <circle cx="150" cy="45" r="35" fill="rgba(255,255,255,0.85)" />
+  <circle cx="180" cy="50" r="28" fill="rgba(255,255,255,0.7)" />
+  
+  <circle cx="620" cy="40" r="25" fill="rgba(255,255,255,0.7)" />
+  <circle cx="650" cy="35" r="32" fill="rgba(255,255,255,0.85)" />
+  <circle cx="680" cy="40" r="25" fill="rgba(255,255,255,0.7)" />
+
+  <!-- Background hills/trees -->
+  <path d="M 0 200 Q 200 160 400 190 T 800 185 L 800 240 L 0 240 Z" fill="#10b981" opacity="0.6" />
+  <path d="M 0 215 Q 250 180 500 210 T 800 200 L 800 240 L 0 240 Z" fill="#059669" />
+
+  <!-- Main Academic Hall -->
+  <rect x="260" y="80" width="280" height="135" fill="url(#building1)" rx="4" />
+  <!-- Glass Center Façade -->
+  <rect x="340" y="90" width="120" height="125" fill="url(#buildingGlass)" opacity="0.9" rx="2" />
+  
+  <!-- Windows Grid Left -->
+  <rect x="280" y="95" width="20" height="24" fill="#fef08a" />
+  <rect x="310" y="95" width="20" height="24" fill="#fef08a" />
+  <rect x="280" y="130" width="20" height="24" fill="#fef08a" />
+  <rect x="310" y="130" width="20" height="24" fill="#fef08a" />
+  <rect x="280" y="165" width="20" height="24" fill="#fef08a" />
+  <rect x="310" y="165" width="20" height="24" fill="#fef08a" />
+
+  <!-- Windows Grid Right -->
+  <rect x="470" y="95" width="20" height="24" fill="#fef08a" />
+  <rect x="500" y="95" width="20" height="24" fill="#fef08a" />
+  <rect x="470" y="130" width="20" height="24" fill="#fef08a" />
+  <rect x="500" y="130" width="20" height="24" fill="#fef08a" />
+  <rect x="470" y="165" width="20" height="24" fill="#fef08a" />
+  <rect x="500" y="165" width="20" height="24" fill="#fef08a" />
+
+  <!-- Glass lines -->
+  <line x1="380" y1="90" x2="380" y2="215" stroke="#ffffff" stroke-width="2" opacity="0.6" />
+  <line x1="420" y1="90" x2="420" y2="215" stroke="#ffffff" stroke-width="2" opacity="0.6" />
+
+  <!-- Left Library Wing -->
+  <rect x="110" y="110" width="130" height="105" fill="#475569" rx="3" />
+  <rect x="130" y="125" width="22" height="30" fill="#bae6fd" />
+  <rect x="165" y="125" width="22" height="30" fill="#bae6fd" />
+  <rect x="200" y="125" width="22" height="30" fill="#bae6fd" />
+
+  <!-- Right Innovation Centre -->
+  <rect x="560" y="115" width="140" height="100" fill="#475569" rx="3" />
+  <rect x="580" y="130" width="25" height="30" fill="#bae6fd" />
+  <rect x="620" y="130" width="25" height="30" fill="#bae6fd" />
+  <rect x="660" y="130" width="25" height="30" fill="#bae6fd" />
+
+  <!-- Campus Entrance Clock/Pediment -->
+  <polygon points="340,90 400,60 460,90" fill="#1e3a8a" />
+  <circle cx="400" cy="78" r="8" fill="#ffffff" />
+  <circle cx="400" cy="78" r="6" fill="#0f172a" />
+
+  <!-- Foreground Lawn / Path -->
+  <path d="M 0 220 Q 400 215 800 220 L 800 240 L 0 240 Z" fill="#047857" />
+  <polygon points="370,215 430,215 450,240 350,240" fill="#cbd5e1" />
+  
+  <!-- Campus Banner Text -->
+  <rect x="20" y="20" width="270" height="32" rx="6" fill="rgba(15,23,42,0.75)" />
+  <text x="32" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff">HORIZON CREST MAIN CAMPUS</text>
+</svg>

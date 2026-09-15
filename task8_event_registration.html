@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 8 — Event Registration Form | Web Tech Lab 01</title>
+  <meta name="description" content="Event registration form for Web Technologies Graded Lab Task 01.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="brand">Lab 01 Portal</a>
+    <a href="task1_student_profile.html">T1</a>
+    <a href="task2_department_website.html">T2</a>
+    <a href="task3_restaurant_website.html">T3</a>
+    <a href="task4_college_website.html">T4</a>
+    <a href="task5_hotel_booking.html">T5</a>
+    <a href="task6_job_application.html">T6</a>
+    <a href="task7_property_listing.html">T7</a>
+    <a href="task8_event_registration.html" class="active">T8: Event</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <span class="task-badge">Task 08</span>
+      <h1>TechSummit 2025 — Event Registration</h1>
+      <p>Annual Technology &amp; Innovation Conference &bull; November 15–17, 2025 &bull; Islamabad Convention Centre</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Attendee Registration Form</h2>
+      <form id="event-registration-form" action="#" method="post">
+
+        <div class="form-grid">
+
+          <!-- 1. Full Name -->
+          <div class="form-group">
+            <label for="attendee-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="attendee-name" name="attendee_name" placeholder="Your complete name" required>
+          </div>
+
+          <!-- 2. Email -->
+          <div class="form-group">
+            <label for="attendee-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="attendee-email" name="attendee_email" placeholder="you@email.com" required>
+          </div>
+
+          <!-- 3. Phone -->
+          <div class="form-group">
+            <label for="attendee-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="attendee-phone" name="attendee_phone" placeholder="+92-300-0000000" required>
+          </div>
+
+          <!-- 4. Organization / University -->
+          <div class="form-group">
+            <label for="attendee-org">Organization / University</label>
+            <input type="text" id="attendee-org" name="attendee_org" placeholder="e.g. COMSATS University Islamabad">
+          </div>
+
+          <!-- 5. Event Type / Category -->
+          <div class="form-group">
+            <label for="event-type">Participation Category <span class="required">*</span></label>
+            <select id="event-type" name="event_type" required>
+              <option value="" disabled selected>-- Select Category --</option>
+              <option value="student">Student Attendee</option>
+              <option value="professional">Working Professional</option>
+              <option value="speaker">Guest Speaker</option>
+              <option value="exhibitor">Exhibitor / Sponsor</option>
+              <option value="media">Media / Press</option>
+              <option value="volunteer">Volunteer</option>
+            </select>
+          </div>
+
+          <!-- 6. Preferred Sessions (Checkboxes) -->
+          <div class="form-group full">
+            <label>Preferred Sessions <span class="required">*</span></label>
+            <div class="check-group" id="sessions-group">
+              <label><input type="checkbox" name="session" value="ai-ml"> AI &amp; Machine Learning</label>
+              <label><input type="checkbox" name="session" value="web-dev"> Web Development Trends</label>
+              <label><input type="checkbox" name="session" value="cybersecurity"> Cybersecurity &amp; Privacy</label>
+              <label><input type="checkbox" name="session" value="blockchain"> Blockchain &amp; Web3</label>
+              <label><input type="checkbox" name="session" value="cloud"> Cloud Computing &amp; DevOps</label>
+              <label><input type="checkbox" name="session" value="startups"> Startup &amp; Entrepreneurship</label>
+              <label><input type="checkbox" name="session" value="iot"> IoT &amp; Embedded Systems</label>
+            </div>
+          </div>
+
+          <!-- 7. Dietary Preference (Radio) -->
+          <div class="form-group full">
+            <label>Dietary Preference</label>
+            <div class="radio-group" id="dietary-group">
+              <label><input type="radio" name="dietary" value="no-restriction"> No Restrictions</label>
+              <label><input type="radio" name="dietary" value="vegetarian"> Vegetarian</label>
+              <label><input type="radio" name="dietary" value="vegan"> Vegan</label>
+              <label><input type="radio" name="dietary" value="halal"> Halal Only</label>
+              <label><input type="radio" name="dietary" value="gluten-free"> Gluten-Free</label>
+            </div>
+          </div>
+
+          <!-- 8. Registration Date -->
+          <div class="form-group">
+            <label for="registration-date">Registration Date <span class="required">*</span></label>
+            <input type="date" id="registration-date" name="registration_date" required>
+          </div>
+
+          <!-- 9. T-Shirt Size -->
+          <div class="form-group">
+            <label for="tshirt-size">Event T-Shirt Size</label>
+            <select id="tshirt-size" name="tshirt_size">
+              <option value="" disabled selected>-- Select Size --</option>
+              <option value="XS">XS (Extra Small)</option>
+              <option value="S">S (Small)</option>
+              <option value="M">M (Medium)</option>
+              <option value="L">L (Large)</option>
+              <option value="XL">XL (Extra Large)</option>
+              <option value="XXL">XXL (Double Extra Large)</option>
+            </select>
+          </div>
+
+          <!-- 10. Special Requirements / Requests -->
+          <div class="form-group full">
+            <label for="special-requests">Special Requirements / Accessibility Needs</label>
+            <textarea id="special-requests" name="special_requests" rows="4" placeholder="e.g. wheelchair access, hearing assistance, dietary allergy details..."></textarea>
+          </div>
+
+          <!-- Submit & Reset -->
+          <div class="form-group full">
+            <div class="btn-row">
+              <button type="submit" id="event-submit-btn">Register Now</button>
+              <button type="reset" id="event-reset-btn">Clear Form</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <footer class="site-footer">
+      <p>Web Technologies — Lab Task 01 &nbsp;|&nbsp; Task 8: Event Registration Form</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
